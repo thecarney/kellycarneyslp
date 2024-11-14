@@ -1,0 +1,46 @@
+.hero, h1, h2, h3, h4, h5, h6 {
+    /* font-family: "Fredericka the Great", serif !important;  */
+    font-family: "Playfair Display", serif !important; 
+}
+
+.customcallouttext {font-family: 'Oooh Baby', cursive;}
+
+.custom-body-color {
+    background-color: #f5eee6;   
+}
+
+.custom-navbar-color {
+    background-color: #ffffff;   
+}
+
+.custom-jumbotron-bg {
+    background-image: url(../images/coasttrail_sm.jpg);
+    background-size: cover;      /* Ensure the image covers the entire background */
+    background-position: 50% 70%; /* Center the background image */
+    background-repeat: no-repeat; /* Avoid repeating the image */
+}
+
+.hover-card {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .hover-card:hover .card {
+    border-color: #8b714f; /* Optional: Change the border color of the card on hover */
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  /* Make the main content fill the rest of the page */
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    flex: 1; /* Takes up the remaining space */
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid gray;
+  }
