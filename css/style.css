@@ -14,7 +14,7 @@
 }
 
 .custom-jumbotron-bg {
-    background-image: url(../images/coasttrail_sm.jpg);
+    background-image: url(../images/mistytrail.jpg);
     background-size: cover;      /* Ensure the image covers the entire background */
     background-position: 50% 70%; /* Center the background image */
     background-repeat: no-repeat; /* Avoid repeating the image */
