@@ -102,12 +102,37 @@
           <div class="card-header py-3">
             <h4 class="my-0 fw-normal">Free Initial Consultation</h4>
           </div>
-          <div class="card-body d-flex flex-column flex-grow-1">
+          <div class="card-body d-flex flex-column flex-grow-1 pb-0">
             <!-- <h1 class="card-title pricing-card-title">$0<small class="text-body-secondary fw-light"></small></h1> -->
             <p class="fw-bold">It all starts with a conversation.</p>
-            <ul class="list-unstyled mt-0 mb-4">
+            <ul class="list-unstyled mt-0 mb-1">
               <li class="text-start">You will share information about your situation and concerns. I will listen, ask questions, and give some suggestions on what your next steps and priorities might be. After that? It’s up to you to decide if and how you want me to help you move forward.</li>
             </ul>
+
+
+            <div class="btn mx-5 mt-0 pt-0">
+            <!-- Google Calendar Appointment Scheduling begin -->
+            <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+            <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+            <script>
+            (function() {
+              var target = document.currentScript;
+              window.addEventListener('load', function() {
+                calendar.schedulingButton.load({
+                  url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2RmUBUGTkycVO2MyqpOvRBfUnVqAFKuq-olnAsV4HliT5W2FRtZNJZ8Erj1dxOqrz6VJsHcK7Z?gv=true',
+                  color: '#6C757D',
+                  label: "Book a Consult Call",
+                  target,
+                });
+              });
+            })();
+            </script>
+            <!-- end Google Calendar Appointment Scheduling -->
+          </div>
+
+
+
+
           </div>
         </div>
       </div>
@@ -126,7 +151,7 @@
             </ul>
             
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-secondary mx-5" data-bs-toggle="modal" data-bs-target="#Modal2">
+            <button type="button" class="btn btn-secondary mx-5 fw-bold" data-bs-toggle="modal" data-bs-target="#Modal2">
               Show Example Services
             </button>
 
@@ -168,7 +193,7 @@
             </ul>
             
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-secondary mx-5" data-bs-toggle="modal" data-bs-target="#Modal3">
+            <button type="button" class="btn btn-secondary mx-5 fw-bold" data-bs-toggle="modal" data-bs-target="#Modal3">
               Show Example Services
             </button>
 
