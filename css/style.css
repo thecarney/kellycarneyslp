@@ -99,22 +99,46 @@ body {
     border: none;
   }
 
-  .fade-bg::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, 
-        rgba(245, 238, 230, 1),  /* Fully opaque #F5EEE6 at the top */
-        rgba(245, 238, 230, .1) 10%, /* Fade to transparent */
-        rgba(245, 238, 230, 0) 20%, /* Transparent in the middle */
-        rgba(245, 238, 230, 0) 80%, /* Transparent in the middle */
-        rgba(245, 238, 230, .1) 90%, /* Fade to transparent */
-        rgba(245, 238, 230, 1)  /* Fully opaque #F5EEE6 at the bottom */
-    );
-    pointer-events: none;
-}
+  
 
 .customcardcolor1 {background-color: #dae6de !important;}
+
+
+
+/* Ensure the section takes up 75vh on large screens and scales responsively */
+.fade-bg {
+  position: relative;
+  width: 100%;
+  min-height: 50vh; /* Default height for smaller screens */
+}
+
+/* Apply 75vh on large screens */
+@media (min-width: 992px) { 
+  .fade-bg {
+      min-height: 75vh;
+  }
+}
+
+/* Background image */
+.fade-bg {
+  background: url('images/coasttrail_sm.jpg') center/cover no-repeat;
+}
+
+/* Gradient Overlay */
+.fade-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Ensure overlay covers background */
+  background: linear-gradient(to bottom, 
+      rgba(245, 238, 230, 1),  /* Fully opaque #F5EEE6 at the top */
+      rgba(245, 238, 230, .1) 10%, /* Gradually fades */
+      rgba(245, 238, 230, 0) 20%, /* Fully transparent */
+      rgba(245, 238, 230, 0) 80%, /* Transparent in middle */
+      rgba(245, 238, 230, .1) 90%, /* Starts fading back */
+      rgba(245, 238, 230, 1)  /* Fully opaque at bottom */
+  );
+  pointer-events: none;
+}
