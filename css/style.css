@@ -1,7 +1,49 @@
-.hero, h1, h2, h3, h4, h5, h6 {
-    /* font-family: "Fredericka the Great", serif !important;  */
-    font-family: "Playfair Display", serif !important; 
+@font-face {
+  font-family: "Gistesy";
+  src: url("fonts/Gistesy.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: "RoughBrush";
+  src: url("fonts/RoughBrush.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SmoothBrush";
+  src: url("fonts/SmoothBrush.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+.hero, h1, h2, h3, h4, h5, h6 {
+    font-family: "Fredericka the Great", serif !important; 
+    font-family: "Playfair Display", serif !important; 
+    /* font-family: "RoughBrush", serif !important;  */
+    /* font-family: "SmoothBrush", serif !important;  */
+     
+}
+
+.fancycursiveheading {
+  font-family: "RoughBrush", serif !important; 
+}
+
+.fancycursiveheading2 {
+  font-family: "SmoothBrush", serif !important; 
+}
+
+body {
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: "League Spartan", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
+  
+}
+
 
 .customcallouttext {font-family: 'Oooh Baby', cursive;}
 
