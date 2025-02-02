@@ -122,6 +122,8 @@ body {
 /* Background image */
 .fade-bg {
   background: url('images/coasttrail_sm.jpg') center/cover no-repeat;
+  position: relative;
+  min-height: 50vh;
 }
 
 /* Gradient Overlay */
@@ -131,14 +133,45 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; /* Ensure overlay covers background */
+  height: 100%;
   background: linear-gradient(to bottom, 
-      rgba(245, 238, 230, 1),  /* Fully opaque #F5EEE6 at the top */
-      rgba(245, 238, 230, .1) 10%, /* Gradually fades */
+      rgba(245, 238, 230, 1),  /* Fully opaque at the top */
+      rgba(245, 238, 230, .1) 10%, /* Starts fading */
       rgba(245, 238, 230, 0) 20%, /* Fully transparent */
-      rgba(245, 238, 230, 0) 80%, /* Transparent in middle */
+      rgba(245, 238, 230, 0) 80%, /* Transparent */
       rgba(245, 238, 230, .1) 90%, /* Starts fading back */
-      rgba(245, 238, 230, 1)  /* Fully opaque at bottom */
+      rgba(245, 238, 230, 1)  /* Fully opaque at the bottom */
   );
-  pointer-events: none;
+  z-index: 0; /* Ensures it stays behind the content */
+  pointer-events: none; /* Prevents interfering with links */
+}
+
+/* Default: Logo centered over the top-left corner of the headshot */
+.logo-responsive {
+  width: 135px; /* Default size */
+  height: auto;
+  transform: translate(-50%, -50%); /* Moves the logo so its center aligns with the top-left corner */
+}
+
+/* Adjust for mobile */
+@media (max-width: 768px) {
+  .logo-responsive {
+      width: 80px; /* Smaller size for mobile */
+      transform: translate(-50%, -50%); /* Keep centered over the top-left corner */
+  }
+}
+
+
+
+/* Ensure Content is Above the Fade */
+.fade-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .fade-bg {
+      min-height: auto; /* Let it shrink naturally on small screens */
+      margin-top: 4rem; /* Ensure it clears the previous block */
+  }
 }
