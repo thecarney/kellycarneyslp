@@ -1,11 +1,4 @@
 @font-face {
-  font-family: "Gistesy";
-  src: url("fonts/Gistesy.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "RoughBrush";
   src: url("fonts/RoughBrush.ttf") format("truetype");
   font-weight: normal;
@@ -99,25 +92,12 @@ body {
 
 /* Ensure the section takes up 75vh on large screens and scales responsively */
 .fade-bg {
-  position: relative;
-  width: 100%;
-  min-height: 50vh; /* Default height for smaller screens */
-  /* background-attachment: fixed; */
-}
-
-/* Apply 75vh on large screens */
-@media (min-width: 992px) { 
-  .fade-bg {
-      min-height: 75vh;
-  }
-}
-
-/* Background image */
-.fade-bg {
-  background: url('images/coasttrail_sm.jpg') center/cover no-repeat;
-  position: relative;
+  width: 100%; 
   min-height: 50vh;
+  background-position: center;
+  background-size: cover !important;
 }
+
 
 /* Gradient Overlay */
 .fade-bg::before {
@@ -139,12 +119,20 @@ body {
   pointer-events: none; /* Prevents interfering with links */
 }
 
-/* Default: Logo centered over the top-left corner of the headshot */
-.logo-responsive {
-  width: 135px; /* Default size */
-  height: auto;
-  transform: translate(-50%, -50%); /* Moves the logo so its center aligns with the top-left corner */
+/* Ensure Content is Above the Fade */
+.fade-bg > * {
+  position: relative;
+  z-index: 1;
 }
+
+
+/* Apply 75vh on large screens */
+@media (min-width: 992px) { 
+  .fade-bg {
+      min-height: 75vh;
+  }
+}
+
 
 /* Adjust for mobile */
 @media (max-width: 768px) {
@@ -154,18 +142,30 @@ body {
   }
 }
 
+@media (max-width: 768px) { /* Adjust for small screens */
+  .fade-bg {
+    background-size: cover;  /* Maintain full coverage */  
+    background-position: center top !important;  /* Adjust to show more of the top */
+  }
+}
 
-
-/* Ensure Content is Above the Fade */
-.fade-bg > * {
-  position: relative;
-  z-index: 1;
+@media (min-width: 769px) { /* Default for larger screens */
+  .fade-bg {
+      background-position: center center !important;  /* Keep centered on larger screens */
+  }
 }
 
 @media (max-width: 768px) {
   .fade-bg {
       min-height: auto; /* Let it shrink naturally on small screens */
       margin-top: 4rem; /* Ensure it clears the previous block */
+  }
+}
+
+@media (max-width: 991px) { /* Hides background for screens below 992px (sm & md) */
+  .fade-bg {
+      background-image: none !important; /* Remove background image */
+      background-color: #f8f9fa00 !important; /* Optional: Set a fallback background color */
   }
 }
 
